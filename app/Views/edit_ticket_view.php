@@ -18,8 +18,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link" href="#">Parc</a>
+      <a class="nav-item nav-link" href="#">Gestion</a>
     </div>
   </div>
 </nav><br>  
@@ -27,9 +27,10 @@
 <div class="col-md-12">
 
     <form action="/ticket/update" method="post">
-    <label> Demandeur </label> <input type="text" name="ticket_nom" value="<?= $ticket->ticket_nom;?>">
-        <label> Objet </label> <input type="text" name="ticket_tache" value="<?= $ticket->ticket_tache;?>">
-        <label> Date intervention </label> <input type="date" name="ticket_date" value="<?= $ticket->ticket_date;?>">
+      <label> Date et heure </label> <input type="date" name="ticket_date_heure" value="<?= $ticket->ticket_date_heure;?>">
+      <label> Demandeur </label> <input type="text" name="ticket_nom" value="<?= $ticket->ticket_nom;?>">
+      <label> Equipement </label> <input type="text" name="ticket_equipement" value="<?= $ticket->ticket_equipement;?>">
+      <label> Objet </label> <textarea type="text" name="ticket_tache" value="<?= $ticket->ticket_tache;?>"></textarea>
         
         <label> Niveau </label> <select name="ticket_avancement" value="<?= $ticket->ticket_avancement;?>">
         <option valeur="1">1</option>
@@ -38,6 +39,13 @@
         <option valeur="4">4</option>
 
         </select>
+      <label> Technicien </label> <input type="text" name="ticket_technicien" value="<?= $ticket->ticket_technicien;?>">
+      <label> Date intervention </label> <input type="date" name="ticket_date" value="<?= $ticket->ticket_date;?>">
+      <label> Solution </label> <textarea type="text" name="ticket_solution" value="<?= $ticket->ticket_solution;?>"></textarea>
+      <label> Durée </label> <input type="time" name="ticket_duree" value="<?= $ticket->ticket_duree;?>">
+
+
+
 
         <input type="hidden" name="ticket_id" value="<?= $ticket->ticket_id;?>">
         <button type="submit">Confirmer</button>

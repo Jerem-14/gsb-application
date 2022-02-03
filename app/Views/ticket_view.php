@@ -17,8 +17,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link" href="#">Parc</a>
+      <a class="nav-item nav-link" href="#">Gestion</a>
     </div>
   </div>
 </nav><br>  
@@ -41,7 +41,7 @@
                 <th>Niveau</th>
                 <th>Technicien</th>
                 <th>Date intervention</th>
-                <th>Soltion</th>
+                <th>Solution</th>
                 <th>Durée</th>
 
 

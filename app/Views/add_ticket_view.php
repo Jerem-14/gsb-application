@@ -27,18 +27,23 @@
 <div class="col-md-12">
     <legend> Nouveau ticket</legend><br>
     <form action="/ticket/save" method="post">
-        <label> Demandeur </label> <input type="text" name="ticket_nom"><br><br>
-        <lable> Objet </lable><textarea type="text" name="ticket_tache"></textarea><br><br>
-        <label> Date intervention </label> <input type="date" name="ticket_date"><br><br>
-                
+      <label> Date et heure </label> <input type="datetime-local" name="ticket_date_heure"><br><br>
+      <label> Demandeur </label> <input type="text" name="ticket_nom"><br><br>
+      <label> Equipement </label> <input type="text" name="ticket_equipement"><br><br>
+      <label> Objet </label> <textarea type="text" name="ticket_tache" ></textarea><br><br>
         
-        <label> Niveau </label> <select name="ticket_avancement">
+        <label> Niveau </label> <select name="ticket_avancement"><br><br>
         <option valeur="1">1</option>
         <option valeur="2">2</option>
         <option valeur="3">3</option>
         <option valeur="4">4</option>
 
-        </select>
+        </select><br><br>
+      <label> Technicien </label> <input type="text" name="ticket_technicien"><br><br>
+      <label> Date intervention </label> <input type="date" name="ticket_date"><br><br>
+      <label> Solution </label> <textarea type="text" name="ticket_solution"></textarea><br><br>
+      <label> Durée </label> <input type="time" name="ticket_duree"><br><br>
+
 
         <?php
            /* $option = $_POST['avancement'] ? true : false; //toujours basé sur l'attribut name du select
