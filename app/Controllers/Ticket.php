@@ -35,7 +35,7 @@ class Ticket extends Controller
     public function edit($id)
     {
         $model = new Ticket_model();
-        $data['Ticket'] = $model->getTicket($id)->getRow();
+        $data['ticket'] = $model->getTicket($id)->getRow();
         echo view('edit_ticket_view', $data);
     }
  

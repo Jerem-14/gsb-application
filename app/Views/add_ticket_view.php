@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Ajouter nouveau produit</title>
+    <title>Ajouter nouveau ticket</title>
 </head>
 <body>
 
@@ -27,15 +27,17 @@
 <div class="col-md-12">
     <legend> Nouveau ticket</legend><br>
     <form action="/ticket/save" method="post">
-        <label> Nom </label> <input type="text" name="ticket_nom"><br><br>
-        <lable> Tache </lable><textarea type="text" name="ticket_tache"></textarea><br><br>
-        <label> Échéance </label> <input type="date" name="ticket_date"><br><br>
+        <label> Demandeur </label> <input type="text" name="ticket_nom"><br><br>
+        <lable> Objet </lable><textarea type="text" name="ticket_tache"></textarea><br><br>
+        <label> Date intervention </label> <input type="date" name="ticket_date"><br><br>
                 
         
-        <label> Avancement </label> <select name="ticket_avancement">
-        <option valeur="a_faire">À faire</option>
-        <option valeur="en_cours">En cours</option>
-        <option valeur="terminé">Terminé</option>
+        <label> Niveau </label> <select name="ticket_avancement">
+        <option valeur="1">1</option>
+        <option valeur="2">2</option>
+        <option valeur="3">3</option>
+        <option valeur="4">4</option>
+
         </select>
 
         <?php

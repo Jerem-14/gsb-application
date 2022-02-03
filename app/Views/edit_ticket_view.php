@@ -27,14 +27,16 @@
 <div class="col-md-12">
 
     <form action="/ticket/update" method="post">
-    <label> Nom </label><input type="text" name="ticket_nom" value="<?= $ticket->ticket_nom;?>">
-        <label> Tache </label><input type="text" name="ticket_tache" value="<?= $ticket->ticket_tache;?>">
-        <label> Échéance </label> <input type="date" name="ticket_date" value="<?= $ticket->ticket_date;?>">
+    <label> Demandeur </label> <input type="text" name="ticket_nom" value="<?= $ticket->ticket_nom;?>">
+        <label> Objet </label> <input type="text" name="ticket_tache" value="<?= $ticket->ticket_tache;?>">
+        <label> Date intervention </label> <input type="date" name="ticket_date" value="<?= $ticket->ticket_date;?>">
         
-        <label> Avancement </label> <select name="ticket_avancement" value="<?= $ticket->ticket_avancement;?>">
-        <option valeur="a_faire">À faire</option>
-        <option valeur="en_cours">En cours</option>
-        <option valeur="terminé">Terminé</option>
+        <label> Niveau </label> <select name="ticket_avancement" value="<?= $ticket->ticket_avancement;?>">
+        <option valeur="1">1</option>
+        <option valeur="2">2</option>
+        <option valeur="3">3</option>
+        <option valeur="4">4</option>
+
         </select>
 
         <input type="hidden" name="ticket_id" value="<?= $ticket->ticket_id;?>">

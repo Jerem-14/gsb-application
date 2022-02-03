@@ -34,20 +34,34 @@
     <table class="col-md-12">
         <thead>
             <tr>
-                <th>Nom</th>
-                <th>Tache</th>
-                <th>Avancement</th>
-                <th>Échéance</th>
+                <th>Date et heure</th>
+                <th>Demandeur</th>
+                <th>Equipement</th>
+                <th>Objet</th>
+                <th>Niveau</th>
+                <th>Technicien</th>
+                <th>Date intervention</th>
+                <th>Soltion</th>
+                <th>Durée</th>
+
+
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
         <?php foreach($ticket as $row):?>
             <tr>
+                <td><?= $row['ticket_date_heure'];?></td>
                 <td><?= $row['ticket_nom'];?></td>
+                <td><?= $row['ticket_equipement'];?></td>
                 <td><?= $row['ticket_tache'];?></td>
                 <td><?= $row['ticket_avancement'];?></td>
+                <td><?= $row['ticket_technicien'];?></td>
                 <td><?= $row['ticket_date'];?></td>
+                <td><?= $row['ticket_solution'];?></td>
+                <td><?= $row['ticket_duree'];?></td>
+
+
                 <td>
                     <a href="/ticket/edit/<?= $row['ticket_id'];?>">Modifer</a>
                     <a href="/ticket/delete/<?= $row['ticket_id'];?>">Supprimer</a>
@@ -57,5 +71,6 @@
         </tbody>
     </table>
 </div>
+
 </body>
 </html>

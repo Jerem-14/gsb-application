@@ -30,5 +30,5 @@ class Ticket_model extends Model
     {
         $query = $this->db->table($this->table)->delete(array('ticket_id' => $id));
         return $query;
-    } 
+    }     
 }
