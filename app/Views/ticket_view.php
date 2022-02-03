@@ -17,8 +17,8 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Parc</a>
-      <a class="nav-item nav-link" href="#">Gestion</a>
+      <li class="nav-item"><a class="nav-link" href="<?=site_url('Parc')?>">Parc</a></li>
+      <a class="nav-item nav-link" href="#">Pricing</a>
     </div>
   </div>
 </nav><br>  
