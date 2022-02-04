@@ -15,12 +15,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/Parc_view.php">Parc</a> 
-      <li class="nav-item"><a class="nav-link" href="<?=site_url('home')?>">Home</a></li>
+  <div class="navbar-nav">
+      <!-- <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a> -->
+      <li class="nav-item "><a class="nav-link" href="<?=site_url('ticket')?>">Accueil</a></li>
+      <li class="nav-item active"><a class="nav-link" href="<?=site_url('parc')?>">Parc</a></li>
       <a class="nav-item nav-link" href="#">Gestion</a>
-      
     </div>
   </div>
 </nav><br>

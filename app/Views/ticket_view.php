@@ -16,9 +16,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a>
-      <li class="nav-item"><a class="nav-link" href="<?=site_url('Parc')?>">Parc</a></li>
-      <a class="nav-item nav-link" href="#">Pricing</a>
+      <!-- <a class="nav-item nav-link active" href="#">Accueil <span class="sr-only">(current)</span></a> -->
+      <li class="nav-item active"><a class="nav-link" href="<?=site_url('ticket')?>">Accueil</a></li>
+      <li class="nav-item"><a class="nav-link" href="<?=site_url('parc')?>">Parc</a></li>
+      <a class="nav-item nav-link" href="#">Gestion</a>
     </div>
   </div>
 </nav><br>  
@@ -43,6 +44,8 @@
                 <th>Date intervention</th>
                 <th>Solution</th>
                 <th>Durée</th>
+                <th>Avancement</th>
+
 
 
                 <th>Action</th>
@@ -55,11 +58,13 @@
                 <td><?= $row['ticket_nom'];?></td>
                 <td><?= $row['ticket_equipement'];?></td>
                 <td><?= $row['ticket_tache'];?></td>
-                <td><?= $row['ticket_avancement'];?></td>
+                <td><?= $row['ticket_niveau'];?></td>
                 <td><?= $row['ticket_technicien'];?></td>
                 <td><?= $row['ticket_date'];?></td>
                 <td><?= $row['ticket_solution'];?></td>
                 <td><?= $row['ticket_duree'];?></td>
+                <td><?= $row['ticket_avancement'];?></td>
+
 
 
                 <td>

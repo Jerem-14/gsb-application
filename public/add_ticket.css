@@ -1,0 +1,34 @@
+body{
+
+}
+
+label{
+   
+}
+
+.info-niveau{
+    position: absolute;
+    top: 324px;
+    left: 116px;
+    width: 30px;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.info-niveau:hover{
+    content: url(asset/infos-niveau.png);
+    width: 50%;
+    top: 150px;
+    left: 25%;
+    
+}
+
+a{color:inherit; text-decoration:none;}
+h1{display:inline-block;}
+div.show{display:none;}
+div.show:target{display:block;}
+
+.more{
+    color: blue;
+}

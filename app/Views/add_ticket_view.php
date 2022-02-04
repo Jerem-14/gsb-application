@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    
+    <link rel="stylesheet" href="/add_ticket.css">
     <title>Ajouter nouveau ticket</title>
 </head>
 <body>
@@ -29,20 +30,38 @@
     <form action="/ticket/save" method="post">
       <label> Date et heure </label> <input type="datetime-local" name="ticket_date_heure"><br><br>
       <label> Demandeur </label> <input type="text" name="ticket_nom"><br><br>
-      <label> Equipement </label> <input type="text" name="ticket_equipement"><br><br>
+      
+        <label id="equipement"> Equipement </label> 
+         <a class="more" href="#equipement">Réduire</a>  <a class="more" href="#afficher">Développer</a> 
+        <div class="show" id="afficher">
+        <div> 
+        <input type="checkbox" id="parc_CPU" name="parc_CPU"><label for="parc_CPU">Processeur</label>
+        </div>
+        <div> 
+        <input type="checkbox" id="parc_memoire" name="parc_memoire"><label for="parc_memoire">Memoire</label>
+        </div>
+        <div> 
+        <input type="checkbox" id="parc_disque" name="parc_disque"><label for="parc_disque">Disque durs</label>
+        </div>
+        <div> 
+        <input type="checkbox" id="parc_logiciels" name="parc_logiciels"><label for="parc_logiciels">Logiciels</label>
+        </div>
+        </div>
+
+      <br><br>
       <label> Objet </label> <textarea type="text" name="ticket_tache" ></textarea><br><br>
         
-        <label> Niveau </label> <select name="ticket_avancement"><br><br>
-        <option valeur="1">1</option>
-        <option valeur="2">2</option>
-        <option valeur="3">3</option>
-        <option valeur="4">4</option>
+        <label> Niveau </label> <select name="ticket_avancement"><br><br> 
+        <option class="niveau1" valeur="1">1</option>
+        <option class="niveau2" valeur="2">2</option>
+        <option class="niveau3" valeur="3">3</option>
+        <option class="niveau4" valeur="4">4</option>
 
-        </select><br><br>
-      <label> Technicien </label> <input type="text" name="ticket_technicien"><br><br>
-      <label> Date intervention </label> <input type="date" name="ticket_date"><br><br>
-      <label> Solution </label> <textarea type="text" name="ticket_solution"></textarea><br><br>
-      <label> Durée </label> <input type="time" name="ticket_duree"><br><br>
+        </select><br><br> <img src="/asset/point-interogation.png" class="info-niveau"><br><br>
+      <!-- <label> Technicien </label> <input type="text" name="ticket_technicien"><br><br> -->
+      <!-- <label> Date intervention </label> <input type="date" name="ticket_date"><br><br> -->
+      <!-- <label> Solution </label> <textarea type="text" name="ticket_solution"></textarea><br><br> -->
+      <!-- <label> Durée </label> <input type="time" name="ticket_duree"><br><br> -->
 
 
         <?php
