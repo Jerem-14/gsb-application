@@ -45,23 +45,25 @@
         <input type="checkbox" id="parc_logiciels" name="parc_logiciels"><label for="parc_logiciels">Logiciels</label>
         </div>
         </div><br><br>
-      <label> Objet </label> <textarea type="text" id="ticket_tache" name="ticket_tache" value="<?= $ticket->ticket_tache;?>"> <?php if(isset($ticket_tache)) echo $ticket_tache; ?><?= filter_input(INPUT_POST, 'ticket_tache') ?></textarea><br><br>
+      <label> Objet </label> <input type="text" id="ticket_tache" name="ticket_tache" value="<?= $ticket->ticket_tache;?>"> <?php if(isset($ticket_tache)) echo $ticket_tache; ?><?= filter_input(INPUT_POST, 'ticket_tache') ?><br><br>
         
-        <label> Niveau </label> <select name="ticket_avancement" value="<?= $ticket->ticket_avancement;?>">
+        <label> Niveau </label> <select type="text" name="ticket_niveau" placeholder="<?= $ticket->ticket_niveau;?>">
         <option valeur="1">1</option>
         <option valeur="2">2</option>
         <option valeur="3">3</option>
         <option valeur="4">4</option>
 
         </select><br><br>
+
+        
       <label> Technicien </label> <input type="text" name="ticket_technicien" value="<?= $ticket->ticket_technicien;?>"><br><br>
       <label> Date intervention </label> <input type="date" name="ticket_date" value="<?= $ticket->ticket_date;?>"><br><br>
-      <label> Solution </label> <textarea type="text" name="ticket_solution" value="<?= $ticket->ticket_solution;?>"></textarea><br><br>
+      <label> Solution </label> <input type="text" name="ticket_solution" value="<?= $ticket->ticket_solution;?>"><br><br>
       <label> Durée </label> <input type="time" name="ticket_duree" value="<?= $ticket->ticket_duree;?>">
       <label> Avancement </label> <select type="text" name="ticket_avancement" value="<?= $ticket->ticket_avancement;?>"><br><br> 
         <option valeur="remis">Remis</option>
         <option valeur="en_cours">En cours</option>
-        <option valeur="termine">Termine</option>
+        <option valeur="ferme">Fermé</option>
 
         </select><br><br>
       <br><br>

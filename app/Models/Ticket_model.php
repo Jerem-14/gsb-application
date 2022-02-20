@@ -17,6 +17,9 @@ class Ticket_model extends Model
     public function saveTicket($data)
     {
         $query = $this->db->table($this->table)->insert($data);
+        if(!$query) {
+            return $this->db->error();
+        }
         return $query;
     }
  

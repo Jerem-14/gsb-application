@@ -40,15 +40,19 @@
                 <th>Equipement</th>
                 <th>Objet</th>
                 <th>Niveau</th>
-                <th>Technicien</th>
+                <!-- <th>Technicien</th>
                 <th>Date intervention</th>
                 <th>Solution</th>
-                <th>Durée</th>
+                <th>Durée</th> -->
                 <th>Avancement</th>
 
+                <?php echo "
+                <th>Action</th>";
+
+                ?>
 
 
-                <th>Action</th>
+
             </tr>
         </thead>
         <tbody>
@@ -59,15 +63,15 @@
                 <td><?= $row['ticket_equipement'];?></td>
                 <td><?= $row['ticket_tache'];?></td>
                 <td><?= $row['ticket_niveau'];?></td>
-                <td><?= $row['ticket_technicien'];?></td>
+               <!-- <td><?= $row['ticket_technicien'];?></td>
                 <td><?= $row['ticket_date'];?></td>
                 <td><?= $row['ticket_solution'];?></td>
-                <td><?= $row['ticket_duree'];?></td>
-                <td><?= $row['ticket_avancement'];?></td>
+                <td><?= $row['ticket_duree'];?></td>-->
+                <td><?= $row['ticket_avancement'];?></td> 
 
 
 
-                <td>
+                <td id="action" >
                     <a href="/ticket/edit/<?= $row['ticket_id'];?>">Modifer</a>
                     <a href="/ticket/delete/<?= $row['ticket_id'];?>">Supprimer</a>
                 </td>

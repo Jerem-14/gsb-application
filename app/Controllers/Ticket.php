@@ -25,10 +25,14 @@ class Ticket extends Controller
             'ticket_tache' => $this->request->getPost('ticket_tache'),
             'ticket_avancement' => $this->request->getPost('ticket_avancement'),
             'ticket_date' => $this->request->getPost('ticket_date'),
+            'ticket_niveau' => $this->request->getPost('ticket_niveau'),
+            'ticket_technicien' => $this->request->getPost('ticket_technicien'),
+            'ticket_solution' => $this->request->getPost('ticket_solution'),
+            'ticket_duree' => $this->request->getPost('ticket_duree'),
 
         );
         
-        $model->saveTicket($data);
+        $model = $model->saveTicket($data);
         return redirect()->to('/ticket');
     }
  
@@ -48,7 +52,11 @@ class Ticket extends Controller
             'ticket_tache' => $this->request->getPost('ticket_tache'),
             'ticket_avancement' => $this->request->getPost('ticket_avancement'),
             'ticket_date' => $this->request->getPost('ticket_date'),
-
+            'ticket_niveau' => $this->request->getPost('ticket_niveau'),
+            'ticket_technicien' => $this->request->getPost('ticket_technicien'),
+            'ticket_solution' => $this->request->getPost('ticket_solution'),
+            'ticket_duree' => $this->request->getPost('ticket_duree'),
+            
         );
         $model->updateTicket($data, $id);
         return redirect()->to('/ticket');
